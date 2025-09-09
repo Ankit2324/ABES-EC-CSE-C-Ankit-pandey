@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipkart Clone</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    header {
+      background: #2874f0;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      position: relative;
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 8px 10px 8px 35px; /* left padding for icon */
+      border: none;
+      border-radius: 2px;
+      font-size: 14px;
+    }
+
+    .search-bar .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #666;
+      pointer-events: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Dot menu */
+    .dot-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .dot-menu span {
+      width: 3px;
+      height: 3px;
+      background: white;
+      border-radius: 50%;
+    }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .categories div {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .categories img {
+      width: 40px;
+      height: 40px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    /* Banner Section */
+    .banner {
+      margin: 10px 0;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    /* Deals Section */
+    .deals {
+      padding: 20px;
+      background: #f1f3f6;
+    }
+
+    .deals h2 {
+      margin-bottom: 15px;
+    }
+
+    .deal-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .deal {
+      background: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .deal img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .deal p {
+      font-size: 14px;
+    }
+
+    footer {
+      background: #172337;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Flipkart <br>
+    plus</div>
+
+    <div class="search-bar">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" placeholder="Search for Products, Brands and More" />
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Login</a>
+      <a href="#">Cart</a>
+      <a href="#">Become a Seller</a>
+      <div class="dot-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="categories">
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/delivery--v1.png" alt="" />
+      Minutes
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/smartphone.png" alt="" />
+      Mobiles
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/t-shirt.png" alt="" />
+      Fashion
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/laptop.png" alt="" />
+      Electronics
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/sofa.png" alt="" />
+      Furniture
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/television.png" alt="" />
+      Appliances
+    </div>
+    <div>
+      <img src="https://img.icons8.com/color/48/000000/airplane-take-off.png" alt="" />
+      Flights
+    </div>
+  </section>
+
+  <section class="banner">
+    <img
+      src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/bb28e964e3ab3f7c.jpg?q=60"
+      alt="Banner"
+    />
+  </section>
+
+  <section class="deals">
+    <h2>Best Deals</h2>
+    <div class="deal-items">
+      <div class="deal">
+        <img
+          src="https://cdn.pixabay.com/photo/2022/08/01/07/59/vegetables-7357585_1280.png"
+          alt=""
+        />
+        <p>Product 1</p>
+      </div>
+      <div class="deal">
+        <img
+          src="https://tse4.mm.bing.net/th/id/OIP.h1GQMrPySLLIbNy3a-H3CgHaEK?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt=""
+        />
+        <p>Product 2</p>
+      </div>
+      <div class="deal">
+        <img
+          src="https://thumbs.dreamstime.com/z/many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-164230611.jpg"
+          alt=""
+        />
+        <p>Product 3</p>
+      </div>
+      <div class="deal">
+        <img
+          src="https://rukminim2.flixcart.com/image/240/240/kcf4lu80/speaker/mobile-tablet-speaker/h/u/f/srs-xb23-sony-original-imaftk66vjxp86h5.jpeg?q=60"
+          alt=""
+        />
+        <p>Product 4</p>
+      </div>
+      <div class="deal">
+        <img
+          src="https://rukminim2.flixcart.com/image/240/240/xif0q/water-geyser/m/9/7/-original-imahd77j8jh7hmge.jpeg?q=605"
+          alt=""
+        />
+        <p>Product 5</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
