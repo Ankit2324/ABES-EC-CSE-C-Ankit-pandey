@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - 5</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .outer-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: blueviolet;
+        }
+        header img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        header h1{
+            color: #fff;
+        }
+        .container{
+            height: 500px;
+            width: 500px;
+            background-color: rgb(183, 221, 255);
+            margin: 30px;
+            border-radius: 40px;
+        }
+        .count-box #count{
+            font-size: 100px;
+        }
+        .count-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #inc{
+            font-size: 50px;
+            width: 100px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        #dec{
+            font-size: 50px;
+            width: 100px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/6357/6357834.png">
+        <h1>Counter App</h1>
+    </header>
+    
+    <div class="outer-box">
+
+        <div class="container">
+            <div class="img-box">
+                <img id="hide-img" src="https://img.freepik.com/premium-vector/counter-icon-logo-vector-design-template_827767-3540.jpg">
+            </div>
+            <div class="button-box">
+                <button id="hide" onclick="hideImg()">Hide</button>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="count-box">
+                <h1 id="count">0</h1>
+            </div>
+            <div class="button-box">
+                <button id="inc" onclick="counterInc()">+</button>
+                <button id="dec" onclick="counterDec()">-</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="img-box">
+                <img id="change-img" src="https://www.iconeye.com/wp-content/uploads/2020/03/d937f76c180ee566a042568f49f718fd_L.jpg">
+            </div>
+            <div class="button-box">
+                <button id="change" onclick="changeImg()">Change</button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+        var count = document.querySelector('#count');
+        function counterInc(){
+            var prev = Number(count.innerText);
+            if(prev == 10){
+                alert("Maximum Limit 10");
+                return;
+            }
+            count.innerText=${(prev+1)};
+        }
+        function counterDec(){
+            var prev = Number(count.innerText);
+            if(prev == 0){
+                alert("Minimum Limit 0");
+                return;
+            }
+            count.innerText=(prev-1);
+        }
+
+        var hideimg = document.querySelector('#hide-img')
+        function hideImg(){
+            hideimg.src="";
+        }
+        var changeimg = document.querySelector('#change-img')
+        function changeImg(){
+            if(changeimg.src === "images/dress.jpeg") changeimg.src="images/beauty.jpeg";
+            else changeimg.src="images/dress.jpeg";
+        }
+    </script>
+</body>
+</html>
