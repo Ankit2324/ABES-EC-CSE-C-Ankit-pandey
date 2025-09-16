@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: brown;
+      display: flex;
+      gap: 20px;
+      padding: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .card {
+      background: #266268;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      width: 260px;
+      padding: 18px;
+    }
+    .card h2 {
+      margin: 0 0 12px 0;
+      font-size: 18px;
+      color: #223;
+      text-align: center;
+    }
+    .student {
+      background: #728699;
+      border-radius: 8px;
+      padding: 8px 10px;
+      margin: 8px 0;
+      
+    }
+    .student small {
+      display: block;
+      color: #556;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" id="cseCard">
+  <h2>CSE Students</h2>
+  <div id="cse"></div>
+</div>
+
+<div class="card" id="meCard">
+  <h2>ME Students</h2>
+  <div id="me"></div>
+</div>
+
+<script>
+  const student1 = { name: "arpit", roll: 46, class: "CSE" };
+  const student2 = { name: "ankit", roll: 32, class: "CSE" };
+  const student3 = { name: "akash", roll: 21, class: "CSE" };
+  const student4 = { name: "garima", roll: 32, class: "ME" };
+  const student5 = { name: "anubhav", roll: 38, class: "CIVIL" };
+
+  if (student1.class === "CSE") {
+    document.getElementById("cse").innerHTML += '<div class="student">' + student1.name + '<small>Roll: ' + student1.roll + '</small></div>';
+  }
+  if (student2.class === "CSE") {
+    document.getElementById("cse").innerHTML += '<div class="student">' + student2.name + '<small>Roll: ' + student2.roll + '</small></div>';
+  }
+  if (student3.class === "CSE") {
+    document.getElementById("cse").innerHTML += '<div class="student">' + student3.name + '<small>Roll: ' + student3.roll + '</small></div>';
+  }
+  if (student4.class === "ME") {
+    document.getElementById("me").innerHTML += '<div class="student">' + student4.name + '<small>Roll: ' + student4.roll + '</small></div>';
+  }
+</script>
+
+</body>
+</html>
