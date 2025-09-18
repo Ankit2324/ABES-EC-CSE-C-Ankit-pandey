@@ -1,64 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards</title>
-     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-         .container{
-            width: 100vw;
-            height: 100vh;
-            background-image:linear-gradient(90deg, #46bffc 0%, #491537 100%);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-         }
-         .cards{
-            height: 400px;
-            width: 340px;
-            background-color: white;
-            border-radius: 10%;
-            display: flex;
-            flex-direction: flex;
-            align-items: center;
-            gap: 30px;
-            padding: 20px;
-            
-         }
-        img{
-            max-width: 150px;
-            height: 200px;
-            
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Product Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 40px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      max-width: 180px;
+      margin-bottom: 15px;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+      color: #222;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #27ae60;
+      margin-bottom: 5px;
+    }
+    .offer {
+      font-size: 0.9rem;
+      color: #2980b9;
+      margin-bottom: 15px;
+    }
+    ul {
+      margin: 0 0 15px;
+      padding-left: 20px;
+      text-align: left;
+      color: #555;
+      font-size: 0.95rem;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #3498db;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="cards">
-            <img src="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/Apple_iPhone_16_Pro_Render.jpg">
-               <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quibusdam nulla vitae ab sunt, sit recusandae eaque corporis maxime. Fuga unde porro, at saepe dolorem eaque minima aspernatur sed labore?</div>
-                
-        </div>
-        <div class="cards">
-                <img src="https://en.shiftdelete.net/wp-content/uploads/2025/09/google-pixel-10-pro-1024x576.jpg">
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est molestias explicabo minima labore nostrum. Delectus, molestiae sunt possimus nostrum explicabo accusamus repellat natus ullam. Exercitationem hic ratione facilis eveniet.</div>
-        </div>
 
-        <div class="cards">
-                <img src="https://static1.pocketlintimages.com/wordpress/wp-content/uploads/wm/2025/01/galaxy-s25-ultra-header-1.jpg">
-               <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia ad odit voluptatibus quas saepe facilis, ratione consequatur repudiandae reiciendis!</div>
-        </div>
-
-
-
-        
+  <div class="container">
+    <!-- Card 1 -->
+    <div class="card">
+     <img src="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/Apple_iPhone_16_Pro_Render.jpg">
+      <h2>iPhone 15 Pro</h2>
+      <p class="price">₹1,29,900</p>
+      <p class="offer">Flat ₹5,000 Off on HDFC Cards</p>
+      <ul>
+        <li>6.1'' Super Retina XDR</li>
+        <li>A17 Pro Chip</li>
+        <li>48MP Triple Camera</li>
+      </ul>
+      <button>Buy Now</button>
     </div>
-     
-   
+
+    <!-- Card 2 -->
+    <div class="card">
+        <img src="https://en.shiftdelete.net/wp-content/uploads/2025/09/google-pixel-10-pro-1024x576.jpg">
+      <h2>Samsung Galaxy S24 Ultra</h2>
+      <p class="price">₹1,19,999</p>
+      <p class="offer">Exchange Bonus up to ₹10,000</p>
+      <ul>
+        <li>6.8'' QHD+ AMOLED</li>
+        <li>Snapdragon 8 Gen 3</li>
+        <li>200MP Quad Camera</li>
+      </ul>
+      <button>Buy Now</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://static1.pocketlintimages.com/wordpress/wp-content/uploads/wm/2025/01/galaxy-s25-ultra-header-1.jpg">
+      <h2>Google Pixel</h2>h2>
+      <p class="price">₹64,999</p>
+      <p class="offer">Bank Offer: ₹3,000 Instant Discount</p>
+      <ul>
+        <li>6.7'' 2K AMOLED</li>
+        <li>Snapdragon 8 Gen 3</li>
+        <li>50MP Hasselblad Camera</li>
+      </ul>
+      <button>Buy Now</button>
+    </div>
+  </div>
+
 </body>
 </html>
