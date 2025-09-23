@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 20px;
+    }
+    .photo {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .form-section {
+      flex: 1;
+    }
+    .field {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="photo" >
+    <img src="316605.3.webp" alt="" height="100px" width="100px">
+    
+
+  </div>
+
+
+  <div class="form-section">
+    <div class="field">
+      <h2>Your Name</h2>
+      <input type="text" id="name">
+    </div>
+
+    <div class="field">
+      <h2>Course</h2>
+      <input type="text" id="course">
+    </div>
+
+    <div class="field">
+      <h2>Know Language</h2>
+      <label><input type="checkbox" name="lang" value="HTML"> HTML</label><br>
+      <label><input type="checkbox" name="lang" value="CSS"> CSS</label><br>
+      <label><input type="checkbox" name="lang" value="JavaScript"> JavaScript</label><br>
+      <label><input type="checkbox" name="lang" value="Python"> Python</label>
+    </div>
+
+    <button onclick="abes()">CLICK</button>
+
+    <p id="aa"></p>
+  </div>
+
+  <script>
+    function abes() {
+      let name = document.getElementById("name").value;
+      let course = document.getElementById("course").value;
+
+      
+      let langs = [];
+      document.querySelectorAll("input[name='lang']:checked").forEach(cb => {
+        langs.push(cb.value);
+      });
+
+      document.getElementById("aa").innerHTML =
+        "<b>Name:</b> " + name + "<br>" +
+        "<b>Course:</b> " + course + "<br>" +
+        "<b>Languages:</b> " + (langs.length ? langs.join(", ") : "None");
+    }
+  </script>
+</body>
+</html>
