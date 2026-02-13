@@ -14,4 +14,10 @@ const fs =require('fs');
 //         console.log(err);
 //     }
 // })
-fs.appendFileSync("./a.txt",`good`);
+// fs.cpSync("./a.txt","./c.txt");
+fs.cp("./a.txt","./c.txt",(err)=>{
+    if(err)
+    {
+        console.log(err);
+    }
+})
