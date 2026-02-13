@@ -21,3 +21,4 @@ fs.cp("./a.txt","./c.txt",(err)=>{
         console.log(err);
     }
 })
+fs.unlinkSync("./a.txt");
