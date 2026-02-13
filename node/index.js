@@ -15,10 +15,17 @@ const fs =require('fs');
 //     }
 // })
 // fs.cpSync("./a.txt","./c.txt");
-fs.cp("./a.txt","./c.txt",(err)=>{
+// fs.cp("./a.txt","./c.txt",(err)=>{
+//     if(err)
+//     {
+//         console.log(err);
+//     }
+// })
+// fs.unlinkSync("./a.txt");
+fs.unlink("./b.txt",(err)=>{
     if(err)
     {
-        console.log(err);
+        console.log(err)
     }
+
 })
-fs.unlinkSync("./a.txt");
