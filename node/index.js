@@ -1,0 +1,17 @@
+const fs =require('fs');
+//fs.writeFile("./b.txt","cse dept",()=>{;
+// fs.readFile("./a.txt","utf-8",(err,result)=>{
+
+//     if(err){
+//         console.log("error",err);
+//     }
+//     else{
+//         console.log(result);
+//     }
+// })
+// fs.writeFile("./b.txt","cse",(err)=>{
+//     if(err){
+//         console.log(err);
+//     }
+// })
+fs.appendFileSync("./a.txt",`good`);
